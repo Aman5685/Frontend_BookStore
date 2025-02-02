@@ -45,7 +45,7 @@ function About() {
               </button>
             </a>
           </div>
-          <div className="w-1/2 p-5 rounded-full max-md:w-full">
+          <div className="w-1/2 p-5 bg-transparent rounded-full max-md:w-full">
             <img src={rightimg} alt="" />
           </div>
         </div>

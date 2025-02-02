@@ -20,7 +20,7 @@ function Contact() {
       message: data.message,
     };
     axios
-      .post("https://bookstore-dwl8.onrender.com/user/contact", userInfo)
+      .post("http://localhost:4002/user/contact", userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
