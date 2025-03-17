@@ -1,5 +1,5 @@
 //import React from 'react'
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { GoArrowRight } from "react-icons/go";
 import rightimg from "../../public/Images/about-page-team-img.avif";
 import Navbar from "./Navbar";
@@ -9,18 +9,23 @@ function About() {
   const whatappLink = `https://wa.me/${whatappNumber}?text=${encodeURIComponent(
     message
   )}`;
+  const navigate = useNavigate();
+  const gotoHomePage = () => {
+    navigate("/");
+  };
   return (
     <>
       <div className="container max-w-screen-2xl mx-auto">
         <Navbar />
         {/* Button Container */}
         <div className="flex items-center justify-center p-20 ">
-          <Link to="/">
-            {" "}
-            <button className="px-3 py-3 rounded-md bg-indigo-500 hover:bg-indigo-600 text-white border-[1px] hover:shadow-md">
-              Back to home
-            </button>
-          </Link>
+          {" "}
+          <button
+            onClick={gotoHomePage}
+            className="px-3 py-3 rounded-md bg-indigo-500 hover:bg-indigo-600 text-white border-[1px] hover:shadow-md"
+          >
+            Back to home
+          </button>
         </div>
         {/* Main Content */}
         <div className="flex max-md:flex-col dark:border-[1px] dark:border-[#64FFDA]">

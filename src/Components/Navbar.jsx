@@ -21,7 +21,7 @@ function Navbar() {
       localStorage.setItem("theme", "light");
       document.body.classList.remove("dark");
     }
-  }, [theme]);
+  }, [element.classList, theme]);
 
   // Create Hook State use state and use effect;
   const [sticky, setSticky] = useState(false);

@@ -1,11 +1,14 @@
 // import React from 'react';
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast from "react-hot-toast";
-//import navbar from "../Components/Navbar";
 function Contact() {
+  const navigate = useNavigate();
+  const gotoHomePage = () => {
+    navigate("/");
+  };
   const {
     register,
     handleSubmit,
@@ -47,11 +50,7 @@ function Contact() {
               width="100%"
               height="100%"
               className="absolute inset-0"
-              frameBorder={0}
               title="map"
-              marginHeight={0}
-              marginWidth={0}
-              scrolling="no"
               src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
             />
             <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md dark:bg-slate-600 dark:text-white">
@@ -79,20 +78,23 @@ function Contact() {
             </div>
           </div>
           <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 dark:bg-slate-600 dark:text-white">
-            <Link to="/">
+            <navigate to="/">
               {" "}
-              <button className="px-2 py-2 w-24 bg-indigo-500 hover:bg-indigo-600 text-white mb-2 rounded-md border-[1px] max-md:mt-2">
+              <button
+                onClick={gotoHomePage}
+                className="px-2 py-2 w-24 bg-indigo-500 hover:bg-indigo-600 text-white mb-2 rounded-md border-[1px] max-md:mt-2"
+              >
                 Back
               </button>
-            </Link>
+            </navigate>
             <h2 className="text-gray-900 text-lg mb-1 font-medium title-font dark:bg-slate-600 dark:text-white">
               Contact
             </h2>
             <p className="leading-relaxed mb-5 text-gray-600 dark:bg-slate-600 dark:text-white">
-              "Have questions or need{" "}
-              <span className="text-blue-600 underline">assistance?</span> We're
-              here to help! Reach out to us using the form below, and we'll get
-              back to you as soon as possible."
+              &quot;Have questions or need{" "}
+              <span className="text-blue-600 underline">assistance?</span>{" "}
+              We&apos;re here to help! Reach out to us using the form below, and
+              we&apos;ll get back to you as soon as possible.&quot;
             </p>
             {/* Form Validation start */}
             <form onSubmit={handleSubmit(onSubmit)} method="dialog">

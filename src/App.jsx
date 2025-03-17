@@ -1,5 +1,4 @@
-//  import React from 'react'
-
+/* eslint-disable no-unused-vars */
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Signup from "./Components/Signup";

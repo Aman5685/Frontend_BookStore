@@ -55,7 +55,6 @@ function Freebook() {
       },
     ],
   };
-  // console.log(filterData);
   return (
     <>
       <div className="max-w-screen-2x1 container mx-auto md:px-20 px-4">
