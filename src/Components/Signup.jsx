@@ -1,4 +1,3 @@
-
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Login from "./Login";
 import { useForm } from "react-hook-form";
@@ -21,7 +20,7 @@ function Signup() {
       password: data.password,
     };
     await axios
-      .post("http://localhost:4002/user/signup", userInfo)
+      .post("https://bookstore-bmwf.onrender.com/user/signup", userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {

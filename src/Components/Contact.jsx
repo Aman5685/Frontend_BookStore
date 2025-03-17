@@ -23,7 +23,7 @@ function Contact() {
       message: data.message,
     };
     axios
-      .post("http://localhost:4002/user/contact", userInfo)
+      .post("https://bookstore-bmwf.onrender.com/user/contact", userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
